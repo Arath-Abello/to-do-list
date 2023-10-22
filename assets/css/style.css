@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: #d95550;
+}
+
+.logo {
+  width: 300px;
+}
+
+h1 {
+  margin-top: 2.5em;
+  color: #fff;
+  text-align: center;
+}
+
+form {
+  width: 400px;
+  margin: 2.8125em auto;
+  text-align: center;
+}
+form input[type=text] {
+  background-color: #d95550;
+  color: #fff;
+  border-style: dashed;
+  border-color: #55557b;
+  font-size: 1.5rem;
+}
+form input[type=text]::-moz-placeholder {
+  color: #fff;
+}
+form input[type=text]::placeholder {
+  color: #fff;
+}
+form input[type=text]:focus {
+  outline: none;
+}
+form input[type=submit] {
+  font-size: 2rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border-color: #55557b;
+  color: #d95550;
+  transition: 400ms;
+}
+form input[type=submit]:hover {
+  background-color: #f89e8b;
+  cursor: pointer;
+  color: #fff;
+}
+
+.list-container {
+  width: 400px;
+  margin: 0 auto;
+}
+.list-container .task-container {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.375em;
+  padding: 1em;
+  border-radius: 0.25em;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #55557b;
+}
+.list-container .task-container .closeBtn {
+  width: 15px;
+  height: 15px;
+}
+.list-container .task-container .closeBtn:hover {
+  cursor: pointer;
+}
+.list-container #stats {
+  margin-top: 1.5625em;
+  font-size: 1.3rem;
+  color: #f89e8b;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */

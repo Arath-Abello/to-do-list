@@ -1,0 +1,86 @@
+//* variables
+$orange: #d95550;
+$lightOrange: #dd6662;
+$veryLightOrange: #f89e8b;
+$gray: #55557b;
+$white: #fff;
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: $orange;
+}
+.logo{
+    width: 300px;
+}
+h1{
+    margin-top: 2.5em;
+    color: $white;
+    text-align: center;
+}
+form{
+    width: 400px;
+    margin: 2.8125em auto;
+    text-align: center;
+    input[type="text"]{
+        background-color: $orange;
+        color: $white;
+        border-style: dashed;
+        border-color: $gray;
+        font-size: 1.5rem;
+    }
+    input[type="text"]::placeholder{
+        color: $white;
+    }
+    input[type="text"]:focus{
+        outline: none;
+    }
+    input[type="submit"]{
+        font-size: 2rem;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border-color: $gray;
+        color: $orange;
+        transition: 400ms;
+    }
+    input[type="submit"]:hover{
+        background-color: $veryLightOrange;
+        cursor: pointer;
+        color: $white;
+    }
+}
+.list-container{
+    width: 400px;
+    margin: 0 auto;
+    .task-container{
+        background-color: $white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: .375em;
+        padding: 1em;
+        border-radius: .25em;
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: $gray;
+        .closeBtn{
+            width: 15px;
+            height: 15px;
+        }
+        .closeBtn:hover{
+            cursor: pointer;
+        }
+    }
+    #stats{
+        margin-top: 1.5625em;
+        font-size: 1.3rem;
+        color: $veryLightOrange;
+        text-align: center;
+    }
+}
+
+
+
