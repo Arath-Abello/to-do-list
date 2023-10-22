@@ -1,8 +1,11 @@
+let idCounter = 0;
 let list = document.getElementById('list');
 export let addTask = () => {
+    idCounter++;
+
     // hacemos referencia a la variable y a esta misma variable le añadimos un parrafo con este valor (en vez de reemplazar el elemento anterior pues que se añada más parrafos con este valor)
     list = list.innerHTML += `
-    <div class="task-container" id="1">
+    <div class="task-container" id="${idCounter}">
         <label>
             <input type="checkbox">
             Tarea
