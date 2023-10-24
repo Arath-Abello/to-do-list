@@ -25,6 +25,11 @@ export let addTask = () => {
 };
 
 let updateStats = ()=>{
+    // queryselectorAll retorna todos los elementos div dentro del <div id="list"></div>
+    // osea seleccioname todos los elementos div que sean descendientes del div con id list
+    let element = list.querySelectorAll('div');
     let stats = document.getElementById('stats');
-    stats.innerHTML = `<p>Tareas pendientes: 5 - Completadas: 3</p>`;
+    let checkbox = list.querySelectorAll('input[type="checkbox"]:checked');
+    // length nos devuelve un numero dependiendo de la longitud de divs que hay y le restamos uno para que no cuente el que esta vacio en el html
+    stats.innerHTML = `<p>Tareas pendientes: ${element.length-1} - Completadas: ${checkbox.length}</p>`;
 };
