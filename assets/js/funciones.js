@@ -33,3 +33,22 @@ let updateStats = ()=>{
     // length nos devuelve un numero dependiendo de la longitud de divs que hay y le restamos uno para que no cuente el que esta vacio en el html
     stats.innerHTML = `<p>Tareas pendientes: ${element.length-1} - Completadas: ${checkbox.length}</p>`;
 };
+
+list.addEventListener('click', evento =>{
+    // podemos ver que elemento causo ese evento click
+    // target nos dice informacion del elemento que hemos hecho click
+    // nodeName es el nombre del elemento
+    // console.log(evento);
+    if(evento.target.nodeName === 'INPUT'){
+        updateStats();
+    }else if(evento.target.nodeName === 'IMG'){
+        // obtenemos el valor del id y lo pasamos al parametro(variable) id para la funcion deleteTask
+        deleteTask(evento.target.parentNode.id);
+    }
+});
+
+let deleteTask = id =>{
+    let taskToDelete = document.getElementById(id);
+    list.removeChild(taskToDelete);
+    updateStats();
+}
