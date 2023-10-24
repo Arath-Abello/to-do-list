@@ -1,6 +1,12 @@
 let idCounter = 0;
 let input = document.querySelector('input[type="text"]');
 
+
+let updateStats = ()=>{
+    stats.innerHTML = `<p>Tareas pendientes: 5 - Completadas: 3</p>`;
+};
+console.log(stats);
+
 let list = document.getElementById('list');
 export let addTask = () => {
     // incrementara cada vez que agreguemos una nueva tarea
@@ -20,4 +26,6 @@ export let addTask = () => {
 
     // cuando se envie la informacion se borrara el contenido del input
     input.value = '';
-}
+
+    updateStats();
+};
